@@ -1,4 +1,8 @@
-.nav button {
+.navButton {
   display: block;
-  background-color: red;
+  font-size: 40px;
+
+  svg {
+    color: red;
+  }
 }

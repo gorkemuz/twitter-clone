@@ -13,26 +13,6 @@ module.exports = {
       },
     };
 
-    // TypeScript with Next.js
-    newConfig.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      include: [
-        path.resolve(__dirname, "../components"),
-        path.resolve(__dirname, "../styles"),
-        path.resolve(__dirname, "../stories"),
-      ],
-      use: [
-        {
-          loader: "babel-loader",
-          options: {
-            presets: ["next/babel"],
-            plugins: ["react-docgen"],
-          },
-        },
-      ],
-    });
-    newConfig.resolve.extensions.push(".ts", ".tsx");
-
     //
     // CSS Modules
     // Many thanks to https://github.com/storybookjs/storybook/issues/6055#issuecomment-521046352
@@ -54,6 +34,15 @@ module.exports = {
           options: {
             importLoaders: 1,
             modules: true,
+          },
+        },
+        {
+          loader: "postcss-loader",
+          options: {
+            sourceMap: true,
+            config: {
+              path: "./.storybook/",
+            },
           },
         },
       ],
