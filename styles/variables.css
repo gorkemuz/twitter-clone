@@ -6,4 +6,6 @@
   --c-gray: #6e7670;
   --c-dark-gray: #202327;
   --c-text-color: #fff;
+
+  --fade: 120ms;
 }

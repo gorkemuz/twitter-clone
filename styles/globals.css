@@ -1,6 +1,7 @@
 @import "variables.css";
 html {
   font-size: 15px;
+  color: var(--c-text-color);
 }
 button {
   cursor: pointer;

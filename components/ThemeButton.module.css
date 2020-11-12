@@ -1,0 +1,14 @@
+.ThemeButton {
+  background-color: var(--c-theme);
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 39px;
+  font-weight: bold;
+  &:hover {
+    color: var(--c-text-color);
+    background-color: var(--c-theme);
+  }
+}
+.big {
+  height: 47px;
+}
