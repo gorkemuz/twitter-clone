@@ -1,10 +1,7 @@
-import styles from '../styles/Home.module.css'
-import React from 'react'
+import React from "react";
 
-function Button({children}) {
-  return(
-    <button>{children}</button>
-  )
+function Button({ children, ...props }) {
+  return <button {...props}>{children}</button>;
 }
 
-export default Button
+export default Button;
