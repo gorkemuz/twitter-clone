@@ -1,16 +1,16 @@
 {
     "files.exclude": {
-        "package-lock.json": true,
-        "postcss.config.js": true,
-        "README.md": true,
-        ".gitignore": true,
-        "public": true,
-        ".next": true,
-        ".vscode": true,
-        "icons": true,
-        "node_modules": true,
-        ".storybook": true,
-        "package.json": true
+        "package-lock.json": false,
+        "postcss.config.js": false,
+        "README.md": false,
+        ".gitignore": false,
+        "public": false,
+        ".next": false,
+        ".vscode": false,
+        "icons": false,
+        "node_modules": false,
+        ".storybook": false,
+        "package.json": false
     },
-    "workspace.isHidden": true
+    "workspace.isHidden": false
 }

@@ -4,10 +4,11 @@ import React from "react";
 
 function Photo({
   src = "https://pbs.twimg.com/profile_images/999960742504861696/RrNU0_ym_400x400.jpg",
-  alt = "photo",
+  alt = "photoq",
+  size = 47,
 }) {
   return (
-    <div className={styles.Photo}>
+    <div className={styles.Photo} style={{ height: size, width: size }}>
       <img className={styles.Img} src={src} alt={alt}></img>
     </div>
   );

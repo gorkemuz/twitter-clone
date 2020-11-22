@@ -9,10 +9,12 @@ function SideBar({ flat = false, className }) {
   return (
     <div className={cn(styles.SideBar, className)}>
       <Navigation flat={flat} />
-      <ThemeButton big full={!flat}>
+      <ThemeButton className={styles.ThemeButton} big={!flat} flat={flat}>
         {flat ? "a" : "Tweet"}
       </ThemeButton>
-      <ProfileBox />
+      <div className={styles.Profile}>
+        <ProfileBox flat={flat} />
+      </div>
     </div>
   );
 }

@@ -5,7 +5,10 @@
 }
 .Sidebar {
   flex-shrink: 0;
-  flex-basis: 230px;
+  flex-basis: auto;
+  @media (--d) {
+    flex-basis: 280px;
+  }
 }
 .Main {
   flex-grow: 1;
@@ -13,7 +16,7 @@
 .Extra {
   flex-shrink: 1;
   @media (--t) {
-    flex-basis: 230px;
+    flex-basis: 400px;
     flex-shrink: 0;
   }
 }

@@ -1,3 +1,18 @@
 .SideBar {
-  padding-right: 40px;
+  padding-right: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (--d) {
+    align-items: stretch;
+  }
+}
+.Profile {
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+.ThemeButton {
+  margin-top: 8px;
 }
