@@ -15,44 +15,75 @@ import {
 
 import styles from "./Navigation.module.css";
 
-function Nav({ selected }) {
+const MENU = [
+  {
+    key: "twit",
+    icon: <Twitter />,
+    title: "",
+    notify: 0,
+  },
+  {
+    key: "home",
+    icon: <Home />,
+    title: "Home",
+    notify: 0,
+  },
+  {
+    key: "explore",
+    icon: <Explore />,
+    title: "Explore",
+    notify: 0,
+  },
+  {
+    key: "notification",
+    icon: <Notification />,
+    title: "Notification",
+    notify: 13,
+  },
+  {
+    key: "messages",
+    icon: <Messages />,
+    title: "Messages",
+    notify: 0,
+  },
+  {
+    key: "bookmark",
+    icon: <Bookmark />,
+    title: "Bookmark",
+    notify: 0,
+  },
+  {
+    key: "list",
+    icon: <Lists />,
+    title: "List",
+    notify: 0,
+  },
+  {
+    key: "profile",
+    icon: <Profile />,
+    title: "Profile",
+    notify: 0,
+  },
+  {
+    key: "more",
+    icon: <More />,
+    title: "More",
+    notify: 0,
+  },
+];
+
+function Nav({ flat = false, selected }) {
   return (
     <nav className={styles.nav}>
-      <NavButton>
-        <Twitter />
-      </NavButton>
-      <NavButton selected={selected === "home"}>
-        <Home />
-        <TextTitle>Home</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "explore"}>
-        <Explore />
-        <TextTitle>Explore</TextTitle>
-      </NavButton>
-      <NavButton notify="13" selected={selected === "notification"}>
-        <Notification />
-        <TextTitle>Notification</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "messages"}>
-        <Messages />
-        <TextTitle>Messages</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "bookmark"}>
-        <Bookmark />
-        <TextTitle>Bookmark</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "lists"}>
-        <Lists />
-        <TextTitle>Lists</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "profile"}>
-        <Profile />
-        <TextTitle>Profile</TextTitle>
-      </NavButton>
-      <NavButton selected={selected === "more"}>
-        <More />
-        <TextTitle>More</TextTitle>
-      </NavButton>
+      {MENU.map((menu) => {
+        const showTitle = !flat && menu.title.length > 0;
+        return (
+          <NavButton notify={menu.notify} selected={selected === menu.key}>
+            {menu.icon}
+            {showTitle ? <TextTitle>{menu.title}</TextTitle> : null}
+          </NavButton>
+        );
+      })}
     </nav>
   );
 }

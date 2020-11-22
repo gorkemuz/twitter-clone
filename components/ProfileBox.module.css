@@ -21,3 +21,6 @@
   align-items: center;
   justify-content: center;
 }
+.Slug {
+  color: var(--c-gray);
+}

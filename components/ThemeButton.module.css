@@ -3,6 +3,7 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 39px;
+  min-width: 39px;
   font-weight: bold;
   &:hover {
     color: var(--c-text-color);
@@ -11,4 +12,5 @@
 }
 .big {
   height: 47px;
+  min-width: 47px;
 }
