@@ -8,7 +8,7 @@
   transition: var(--fade);
   font-size: inherit;
   &:hover {
-    background-color: var(--c-theme-20);
+    background-color: var(--c-theme-10);
     color: var(--c-theme);
   }
 }

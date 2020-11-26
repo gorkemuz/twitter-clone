@@ -1,6 +1,7 @@
 .ProfileBox {
   padding: 10px;
   align-items: start;
+  width: 100%;
   &:hover {
     color: var(--c-text-color);
   }

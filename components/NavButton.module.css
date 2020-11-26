@@ -10,7 +10,7 @@
   }
 }
 .selected {
-  color: var(--c-theme);
+  color: var(--c-theme) !important;
 }
 .notify {
   height: 17px;

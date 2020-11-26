@@ -6,7 +6,7 @@ import TextBody from "./TextBody";
 import { ArrowBottom } from "../components/icon/index";
 function ProfileBox({ flat, name = "Görkem Uz", slug = "@gorkemuz" }) {
   return (
-    <Button className={styles.ProfileBox}>
+    <Button className={styles.ProfileBox} full>
       <Photo size={39} />
       {!flat ? (
         <>

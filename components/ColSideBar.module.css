@@ -15,4 +15,8 @@
 }
 .ThemeButton {
   margin-top: 8px;
+  width: auto;
+  @media (--d) {
+    width: 90%;
+  }
 }
